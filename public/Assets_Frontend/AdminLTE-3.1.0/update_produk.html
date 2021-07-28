@@ -1,0 +1,47 @@
+
+<center><h1>Update</h1></center>    
+<div style="width: 75%;margin: auto;">
+    <form  method="post">
+        @csrf
+        <div class="form-group">
+            <div class="input-group">
+                
+                <input name="nama_produk" type="text" class="form-control" placeholder="Nama Produk" aria-label="Nama Produk" aria-describedby="basic-addon1">
+            </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Rp. </span>
+            </div>
+            <input  name="harga" type="number" min="1" class="form-control" aria-label="Amount (to the nearest dollar)">
+            
+          </div>
+      </div>
+      
+
+      <div class="form-group">
+        <div class="input-group">
+          
+          <textarea placeholder="Deskripsi" name="deskripsi" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Pilih Kategori</label>
+      <select name="kategori_id" class="form-control" id="exampleFormControlSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+
+    <input data-default-file="url_of_your_file" name="gambar" type="file" class="dropify" />
+   <br>
+   <center>
+    <button type="submit" class="btn btn-success">Send!</button>
+</center>
+    </form>
+</div>

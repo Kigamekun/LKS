@@ -1,0 +1,158 @@
+<!--
+
+=========================================================
+* Argon Dashboard - v1.1.2
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
+  </title>
+  <!-- Favicon -->
+  <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="../assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="../assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="../assets/css/argon-dashboard.css?v=1.1.2" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link rel="stylesheet" href="../assets/jquery-datatable/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="../assets/jquery-datatable/buttons/buttons.bootstrap4.min.css">
+<link rel="stylesheet" href="../assets/jquery-datatable/buttons/select.bootstrap4.min.css">
+
+
+
+</head>
+
+<body class="">
+
+
+
+
+
+
+<center><h1>Update</h1></center>    
+    <div style="width: 75%;margin: auto;">
+        <form  method="post">
+            @csrf
+            <div class="form-group">
+                <div class="input-group">
+                    
+                    <input name="nama_produk" type="text" class="form-control" placeholder="Nama Produk" aria-label="Nama Produk" aria-describedby="basic-addon1">
+                </div>
+            </div>
+    
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Rp. </span>
+                </div>
+                <input  name="harga" type="number" min="1" class="form-control" aria-label="Amount (to the nearest dollar)">
+                
+              </div>
+          </div>
+          
+    
+          <div class="form-group">
+            <div class="input-group">
+              
+              <textarea placeholder="Deskripsi" name="deskripsi" class="form-control" aria-label="With textarea"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Pilih Kategori</label>
+          <select name="kategori_id" class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+    
+        <input data-default-file="url_of_your_file" name="gambar" type="file" class="dropify" />
+       <br>
+       <center>
+        <button type="submit" class="btn btn-success">Send!</button>
+    </center>
+        </form>
+    </div>
+
+
+
+
+
+  <!--   Core   -->
+  <script src="../assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!--   Optional JS   -->
+  <!--   Argon JS   -->
+  <script src="../assets/js/argon-dashboard.min.js?v=1.1.2"></script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <script src="../assets/jquery-datatable/jquery.dataTables.min.js"></script>
+<script src="../assets/jquery-datatable/dataTables.bootstrap4.min.js"></script>
+<script src="../assets/jquery-datatable/buttons/dataTables.buttons.min.js"></script>
+<script src="../assets/jquery-datatable/buttons/buttons.bootstrap4.min.js"></script>
+<script src="../assets/jquery-datatable/buttons/buttons.html5.min.js"></script>
+<script src="../assets/jquery-datatable/buttons/buttons.flash.min.js"></script>
+<script src="../assets/jquery-datatable/buttons/buttons.print.min.js"></script>
+<script src="../assets/jquery-datatable/dataTables.select.min.js"></script>
+
+
+  <script>
+    $('.dropify').dropify();
+  </script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-dashboard-free"
+      });
+  </script>
+
+  <script>
+
+$(document).ready(function () {
+         $('#datatable-buttons').dataTable({
+
+          "language": {
+    "paginate": {
+      "next": ">",
+      "previous": "<"
+    }
+  },
+           
+        "columnDefs": [ {
+          "targets": 'no-sort',
+          "orderable": false,
+    } ]
+} );
+
+});
+  </script>
+
+</body>
+
+</html>
